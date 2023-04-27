@@ -29,7 +29,7 @@ export const EXPERIMENTAL_LABEL = i18n.translate('xpack.cases.header.badge.exper
 
 export const EXPERIMENTAL_DESC = i18n.translate('xpack.cases.header.badge.experimentalDesc', {
   defaultMessage:
-    'This functionality is in technical preview and may be changed or removed completely in a future release. Elastic will take a best effort approach to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.',
+    'This functionality is in technical preview and may be changed or removed completely in a future release. gExplorer will take a best effort approach to fix any issues, but features in technical preview are not subject to the support SLA of official GA features.',
 });
 
 export const BETA_LABEL = i18n.translate('xpack.cases.header.badge.betaLabel', {

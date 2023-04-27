@@ -155,7 +155,7 @@ export const ClusterConfigurationForm: FunctionComponent<ClusterConfigurationFor
             defaultTitle={i18n.translate(
               'interactiveSetup.clusterConfigurationForm.submitErrorTitle',
               {
-                defaultMessage: "Couldn't configure Elastic",
+                defaultMessage: "Couldn't configure gExplorer",
               }
             )}
           />
@@ -297,7 +297,7 @@ export const ClusterConfigurationForm: FunctionComponent<ClusterConfigurationFor
           >
             <FormattedMessage
               id="interactiveSetup.clusterConfigurationForm.submitButton"
-              defaultMessage="{isSubmitting, select, true{Configuring Elastic…} other{Configure Elastic}}"
+              defaultMessage="{isSubmitting, select, true{Configuring gExplorer…} other{Configure gExplorer}}"
               values={{ isSubmitting: form.isSubmitting }}
             />
           </EuiButton>

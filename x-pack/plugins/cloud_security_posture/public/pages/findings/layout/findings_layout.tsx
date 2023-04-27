@@ -74,7 +74,7 @@ const baseColumns = [
         )}
         tooltipContent={i18n.translate(
           'xpack.csp.findings.findingsTable.findingsTableColumn.resourceIdColumnTooltipLabel',
-          { defaultMessage: 'Custom Elastic Resource ID' }
+          { defaultMessage: 'Custom gExplorer Resource ID' }
         )}
       />
     ),

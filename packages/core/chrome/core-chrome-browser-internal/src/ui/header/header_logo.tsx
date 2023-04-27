@@ -99,14 +99,14 @@ export function HeaderLogo({ href, navigateToApp, loadingCount$, ...observables 
       href={href}
       data-test-subj="logo"
       aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.goHomePageIconAriaLabel', {
-        defaultMessage: 'Elastic home',
+        defaultMessage: 'gExplorer home',
       })}
     >
       <LoadingIndicator loadingCount$={loadingCount$!} customLogo={logo} />
       {customizedLogo ? (
         <img src={customizedLogo} width="200" height="84" alt="custom mark" />
       ) : (
-        <ElasticMark className="chrHeaderLogo__mark" aria-hidden={true} />
+        <p style={{"color": "white", "marginLeft": "10px", "fontWeight": 300}}>gExplorer</p>
       )}
     </a>
   );

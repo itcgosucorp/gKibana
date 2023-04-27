@@ -108,7 +108,7 @@ export const EnrollmentTokenForm: FunctionComponent<EnrollmentTokenFormProps> = 
           <SubmitErrorCallout
             error={form.submitError}
             defaultTitle={i18n.translate('interactiveSetup.enrollmentTokenForm.submitErrorTitle', {
-              defaultMessage: "Couldn't configure Elastic",
+              defaultMessage: "Couldn't configure gExplorer",
             })}
           />
           <EuiSpacer />
@@ -160,7 +160,7 @@ export const EnrollmentTokenForm: FunctionComponent<EnrollmentTokenFormProps> = 
           >
             <FormattedMessage
               id="interactiveSetup.enrollmentTokenForm.submitButton"
-              defaultMessage="{isSubmitting, select, true{Configuring Elastic…} other{Configure Elastic}}"
+              defaultMessage="{isSubmitting, select, true{Configuring gExplorer…} other{Configure gExplorer}}"
               values={{ isSubmitting: form.isSubmitting }}
             />
           </EuiButton>

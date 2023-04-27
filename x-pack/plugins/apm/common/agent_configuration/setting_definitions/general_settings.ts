@@ -234,7 +234,7 @@ export const generalSettings: RawSettingDefinition[] = [
     }),
     description: i18n.translate('xpack.apm.agentConfig.recording.description', {
       defaultMessage:
-        'When recording, the agent instruments incoming HTTP requests, tracks errors, and collects and sends metrics. When set to non-recording, the agent works as a noop, not collecting data and not communicating with the APM Server except for polling for updated configuration. As this is a reversible switch, agent threads are not being killed when set to non-recording, but they will be mostly idle in this state, so the overhead should be negligible. You can use this setting to dynamically control whether Elastic APM is enabled or disabled.',
+        'When recording, the agent instruments incoming HTTP requests, tracks errors, and collects and sends metrics. When set to non-recording, the agent works as a noop, not collecting data and not communicating with the APM Server except for polling for updated configuration. As this is a reversible switch, agent threads are not being killed when set to non-recording, but they will be mostly idle in this state, so the overhead should be negligible. You can use this setting to dynamically control whether gExplorer APM is enabled or disabled.',
     }),
     excludeAgents: ['nodejs', 'rum-js', 'js-base'],
   },
@@ -380,15 +380,15 @@ export const generalSettings: RawSettingDefinition[] = [
         defaultMessage:
           'This option allows some control over how the APM agent handles W3C trace-context headers on incoming requests. By default, the `traceparent` and `tracestate` headers are used per W3C spec for distributed tracing. However, in certain cases it can be helpful to not use the incoming `traceparent` header. Some example use cases:\n' +
           '\n' +
-          '* An Elastic-monitored service is receiving requests with `traceparent` headers from unmonitored services.\n' +
-          '* An Elastic-monitored service is publicly exposed, and does not want tracing data (trace-ids, sampling decisions) to possibly be spoofed by user requests.\n' +
+          '* An gExplorer-monitored service is receiving requests with `traceparent` headers from unmonitored services.\n' +
+          '* An gExplorer-monitored service is publicly exposed, and does not want tracing data (trace-ids, sampling decisions) to possibly be spoofed by user requests.\n' +
           '\n' +
           'Valid values are:\n' +
           "* 'continue': The default behavior. An incoming `traceparent` value is used to continue the trace and determine the sampling decision.\n" +
           "* 'restart': Always ignores the `traceparent` header of incoming requests. A new trace-id will be generated and the sampling decision will be made based on transaction_sample_rate. A span link will be made to the incoming `traceparent`.\n" +
           "* 'restart_external': If an incoming request includes the `es` vendor flag in `tracestate`, then any `traceparent` will be considered internal and will be handled as described for 'continue' above. Otherwise, any `traceparent` is considered external and will be handled as described for 'restart' above.\n" +
           '\n' +
-          'Starting with Elastic Observability 8.2, span links are visible in trace views.\n' +
+          'Starting with gExplorer Observability 8.2, span links are visible in trace views.\n' +
           '\n' +
           'This option is case-insensitive.',
       }
@@ -451,7 +451,7 @@ export const generalSettings: RawSettingDefinition[] = [
       'xpack.apm.agentConfig.sanitizeFiledNames.description',
       {
         defaultMessage:
-          'Sometimes it is necessary to sanitize, i.e., remove, sensitive data sent to Elastic APM. This config accepts a list of wildcard patterns of field names which should be sanitized. These apply to HTTP headers (including cookies) and `application/x-www-form-urlencoded` data (POST form fields). The query string and the captured request body (such as `application/json` data) will not get sanitized.',
+          'Sometimes it is necessary to sanitize, i.e., remove, sensitive data sent to gExplorer APM. This config accepts a list of wildcard patterns of field names which should be sanitized. These apply to HTTP headers (including cookies) and `application/x-www-form-urlencoded` data (POST form fields). The query string and the captured request body (such as `application/json` data) will not get sanitized.',
       }
     ),
     includeAgents: ['java', 'python', 'go', 'dotnet', 'nodejs', 'ruby'],

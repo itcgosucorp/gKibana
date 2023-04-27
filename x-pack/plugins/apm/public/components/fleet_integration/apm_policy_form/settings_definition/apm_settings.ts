@@ -28,7 +28,7 @@ export function getApmSettings(): SettingsRow[] {
         'xpack.apm.fleet_integration.settings.apm.hostDescription',
         {
           defaultMessage:
-            'Host defines the host and port the server is listening on. URL is the unchangeable, publicly reachable server URL for deployments on Elastic Cloud or ECK.',
+            'Host defines the host and port the server is listening on. URL is the unchangeable, publicly reachable server URL for deployments on gExplorer Cloud or ECK.',
         }
       ),
       dataTestSubj: 'packagePolicyHostInput',

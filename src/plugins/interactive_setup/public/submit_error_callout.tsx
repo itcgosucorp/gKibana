@@ -43,7 +43,7 @@ export const SubmitErrorCallout: FunctionComponent<SubmitErrorCalloutProps> = (p
         title={
           <FormattedMessage
             id="interactiveSetup.submitErrorCallout.elasticsearchConnectionConfiguredErrorTitle"
-            defaultMessage="Elastic is already configured"
+            defaultMessage="gExplorer is already configured"
           />
         }
       >
@@ -91,7 +91,7 @@ export const SubmitErrorCallout: FunctionComponent<SubmitErrorCalloutProps> = (p
       {error.body?.statusCode === 403 ? (
         <FormattedMessage
           id="interactiveSetup.submitErrorCallout.forbiddenErrorDescription"
-          defaultMessage="Retry to configure Elastic."
+          defaultMessage="Retry to configure gExplorer."
         />
       ) : error.body?.attributes?.type === ERROR_KIBANA_CONFIG_NOT_WRITABLE ? (
         <FormattedMessage

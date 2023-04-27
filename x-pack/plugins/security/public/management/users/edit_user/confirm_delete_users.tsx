@@ -82,7 +82,7 @@ export const ConfirmDeleteUsers: FunctionComponent<ConfirmDeleteUsersProps> = ({
         <p>
           <FormattedMessage
             id="xpack.security.management.users.confirmDeleteUsers.description"
-            defaultMessage="{count, plural, one{This user} other{These users}} will be permanently deleted and access to Elastic removed{count, plural, one{.} other{:}}"
+            defaultMessage="{count, plural, one{This user} other{These users}} will be permanently deleted and access to gExplorer removed{count, plural, one{.} other{:}}"
             values={{ count: usernames.length }}
           />
         </p>

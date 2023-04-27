@@ -26,7 +26,7 @@ const TRANSLATIONS: Readonly<{ [K in 'title' | 'description' | 'label']: string 
     'xpack.securitySolution.endpoint.policy.details.antivirusRegistration.explanation',
     {
       defaultMessage:
-        'Toggle on to register Elastic as an official Antivirus solution for Windows OS. ' +
+        'Toggle on to register gExplorer as an official Antivirus solution for Windows OS. ' +
         'This will also disable Windows Defender.',
     }
   ),

@@ -171,7 +171,7 @@ export class TimeRangeSelector extends Component {
                 'xpack.ml.jobsList.startDatafeedsModal.startManagedDatafeedsDescription',
                 {
                   defaultMessage:
-                    '{jobsCount, plural, one {This job} other {At least one of these jobs}} is preconfigured by Elastic; starting {jobsCount, plural, one {it} other {them}} with a specific end time might impact other parts of the product.',
+                    '{jobsCount, plural, one {This job} other {At least one of these jobs}} is preconfigured by gExplorer; starting {jobsCount, plural, one {it} other {them}} with a specific end time might impact other parts of the product.',
                   values: {
                     jobsCount: this.props.jobsCount,
                   },

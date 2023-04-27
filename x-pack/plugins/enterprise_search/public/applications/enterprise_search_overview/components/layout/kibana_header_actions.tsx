@@ -57,7 +57,7 @@ export const EnterpriseSearchOverviewHeaderActions: React.FC = () => {
           <p>
             {i18n.translate('xpack.enterpriseSearch.overview.deploymentDetails.description', {
               defaultMessage:
-                'Send data to Elastic from your applications by referencing your deployment and Elasticsearch information.',
+                'Send data to gExplorer from your applications by referencing your deployment and Elasticsearch information.',
             })}
           </p>
         </EuiText>

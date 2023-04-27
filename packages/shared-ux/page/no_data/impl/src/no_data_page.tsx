@@ -29,7 +29,7 @@ export const NoDataPage = ({
   const title =
     pageTitle ||
     i18n.translate('sharedUXPackages.noDataPage.welcomeTitle', {
-      defaultMessage: 'Welcome to Elastic {solution}!',
+      defaultMessage: 'Welcome to gExplorer {solution}!',
       values: { solution },
     });
 

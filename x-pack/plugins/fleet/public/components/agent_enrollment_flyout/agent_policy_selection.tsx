@@ -75,7 +75,7 @@ export const AgentPolicySelection: React.FC<Props> = (props) => {
         {isFleetServerPolicy ? (
           <FormattedMessage
             id="xpack.fleet.enrollmentStepAgentPolicy.selectAgentPolicyFleetServerText"
-            defaultMessage="Fleet Server runs on Elastic Agent, and agents are enrolled in agent policies which represent hosts. You can select an existing agent policy configured for Fleet Server, or you may choose to create a new one."
+            defaultMessage="Fleet Server runs on gExplorer Agent, and agents are enrolled in agent policies which represent hosts. You can select an existing agent policy configured for Fleet Server, or you may choose to create a new one."
           />
         ) : (
           <FormattedMessage

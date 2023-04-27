@@ -175,7 +175,7 @@ export const noItemsStrings = {
   getReadEditDashboardDescription: () =>
     i18n.translate('dashboard.listing.createNewDashboard.combineDataViewFromKibanaAppDescription', {
       defaultMessage:
-        'Analyze all of your Elastic data in one place by creating a dashboard and adding visualizations.',
+        'Analyze all of your gExplorer data in one place by creating a dashboard and adding visualizations.',
     }),
   getSampleDataLinkText: () =>
     i18n.translate('dashboard.listing.createNewDashboard.sampleDataInstallLinkText', {

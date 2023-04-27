@@ -63,7 +63,7 @@ export const App: FunctionComponent<AppProps> = ({ onSuccess }) => {
           <h1>
             <FormattedMessage
               id="interactiveSetup.app.pageTitle"
-              defaultMessage="Configure Elastic to get started"
+              defaultMessage="Configure gExplorer to get started"
             />
           </h1>
         </EuiTitle>

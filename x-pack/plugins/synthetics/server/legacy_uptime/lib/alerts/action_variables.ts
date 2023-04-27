@@ -37,7 +37,7 @@ export const ACTION_VARIABLES = {
       'xpack.synthetics.alerts.monitorStatus.actionVariables.context.alertDetailUrl.description',
       {
         defaultMessage:
-          'Link to the view within Elastic that shows further details and context surrounding this alert',
+          'Link to the view within gExplorer that shows further details and context surrounding this alert',
       }
     ),
   },
@@ -47,7 +47,7 @@ export const ACTION_VARIABLES = {
       'xpack.synthetics.alerts.monitorStatus.actionVariables.context.viewInAppUrl.description',
       {
         defaultMessage:
-          'Link to the view or feature within Elastic that can be used to investigate the alert and its context further',
+          'Link to the view or feature within gExplorer that can be used to investigate the alert and its context further',
       }
     ),
   },

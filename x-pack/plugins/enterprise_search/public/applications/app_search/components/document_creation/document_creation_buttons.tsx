@@ -66,7 +66,7 @@ export const DocumentCreationButtons: React.FC<Props> = ({
     <p>
       {i18n.translate('xpack.enterpriseSearch.appSearch.documentCreation.helperText', {
         defaultMessage:
-          'There are three ways to send documents to your engine for indexing. You can paste or upload a JSON file, POST to the documents API endpoint, or use the  Elastic Web Crawler to automatically index documents from a URL.',
+          'There are three ways to send documents to your engine for indexing. You can paste or upload a JSON file, POST to the documents API endpoint, or use the  gExplorer Web Crawler to automatically index documents from a URL.',
       })}
     </p>
   );

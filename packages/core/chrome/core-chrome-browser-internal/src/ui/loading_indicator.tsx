@@ -84,7 +84,7 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
         data-test-subj={testSubj}
         className="chrHeaderLogo__cluster"
         aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.logoAriaLabel', {
-          defaultMessage: 'Elastic Logo',
+          defaultMessage: 'gExplorer Logo',
         })}
       />
     );

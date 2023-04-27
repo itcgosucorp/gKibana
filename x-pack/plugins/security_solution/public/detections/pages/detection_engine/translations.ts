@@ -57,7 +57,7 @@ export const NEEDS_INDEX_PERMISSIONS = (additionalContext: string) =>
   i18n.translate('xpack.securitySolution.detectionEngine.needsIndexPermissionsMessage', {
     values: { additionalContext },
     defaultMessage:
-      'To use the detection engine, a user with the required cluster and index privileges must first access this page. {additionalContext} For more help, contact your Elastic Stack administrator.',
+      'To use the detection engine, a user with the required cluster and index privileges must first access this page. {additionalContext} For more help, contact your gExplorer Stack administrator.',
   });
 
 export const GO_TO_DOCUMENTATION = i18n.translate(

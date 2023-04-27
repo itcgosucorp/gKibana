@@ -13,7 +13,7 @@ export const apmActionVariables = {
       'xpack.apm.alerts.action_variables.alertDetailsUrl',
       {
         defaultMessage:
-          'Link to the view within Elastic that shows further details and context surrounding this alert',
+          'Link to the view within gExplorer that shows further details and context surrounding this alert',
       }
     ),
     name: 'alertDetailsUrl' as const,

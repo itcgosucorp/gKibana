@@ -103,7 +103,7 @@ export const ElasticsearchGuide: React.FC = () => {
                           'xpack.enterpriseSearch.overview.elasticsearchGuide.connectToElasticsearchDescription',
                           {
                             defaultMessage:
-                              "Elastic builds and maintains clients in several popular languages and our community has contributed many more. They're easy to work with, feel natural to use, and, just like Elasticsearch, don't limit what you might want to do with them.",
+                              "gExplorer builds and maintains clients in several popular languages and our community has contributed many more. They're easy to work with, feel natural to use, and, just like Elasticsearch, don't limit what you might want to do with them.",
                           }
                         )}
                       </p>

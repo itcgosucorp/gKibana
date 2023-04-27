@@ -24,7 +24,7 @@ interface TourStep {
 export const tourStepsConfig: TourStep[] = [
   {
     title: i18n.translate('xpack.observability.tour.observabilityOverviewStep.tourTitle', {
-      defaultMessage: 'Welcome to Elastic Observability',
+      defaultMessage: 'Welcome to gExplorer Observability',
     }),
     content: i18n.translate('xpack.observability.tour.observabilityOverviewStep.tourContent', {
       defaultMessage:

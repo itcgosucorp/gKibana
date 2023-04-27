@@ -31,7 +31,7 @@ export const Template: FunctionComponent<Props> = ({
     customBranding,
   },
 }) => {
-  const title = customBranding.pageTitle ?? 'Elastic';
+  const title = customBranding.pageTitle ?? 'gExplorer';
   const favIcon = customBranding.faviconSVG ?? `${uiPublicUrl}/favicons/favicon.svg`;
   const favIconPng = customBranding.faviconPNG ?? `${uiPublicUrl}/favicons/favicon.png`;
   const logo = customBranding.logo ? (
@@ -45,7 +45,7 @@ export const Template: FunctionComponent<Props> = ({
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width" />
-        <title>{title}</title>
+        <title>gExplorer</title>
         <Fonts url={uiPublicUrl} />
         {/* The alternate icon is a fallback for Safari which does not yet support SVG favicons */}
         <link rel="alternate icon" type="image/png" href={favIconPng} />
@@ -77,11 +77,11 @@ export const Template: FunctionComponent<Props> = ({
               className="kbnWelcomeText"
               data-error-message={i18n('core.ui.welcomeErrorMessage', {
                 defaultMessage:
-                  'Elastic did not load properly. Check the server output for more information.',
+                  'gExplorer did not load properly. Check the server output for more information.',
               })}
             >
               {i18n('core.ui.welcomeMessage', {
-                defaultMessage: 'Loading Elastic',
+                defaultMessage: 'Loading gExplorer',
               })}
             </div>
             <div className="kbnProgress" />
@@ -99,7 +99,7 @@ export const Template: FunctionComponent<Props> = ({
           <div className="kbnWelcomeText">
             {i18n('core.ui.legacyBrowserMessage', {
               defaultMessage:
-                'This Elastic installation has strict security requirements enabled that your current browser does not meet.',
+                'This gExplorer installation has strict security requirements enabled that your current browser does not meet.',
             })}
           </div>
         </div>

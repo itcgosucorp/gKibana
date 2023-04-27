@@ -46,7 +46,7 @@ export function ConfirmSwitchModal({
       confirmButtonText={i18n.translate(
         'xpack.apm.settings.schema.confirm.switchButtonText',
         {
-          defaultMessage: 'Switch to Elastic Agent',
+          defaultMessage: 'Switch to gExplorer Agent',
         }
       )}
       defaultFocusedButton="confirm"
@@ -72,7 +72,7 @@ export function ConfirmSwitchModal({
         title={i18n.translate(
           'xpack.apm.settings.schema.confirm.irreversibleWarning.title',
           {
-            defaultMessage: `Switching to Elastic Agent is an irreversible action`,
+            defaultMessage: `Switching to gExplorer Agent is an irreversible action`,
           }
         )}
         color="warning"
@@ -126,7 +126,7 @@ export function ConfirmSwitchModal({
           label={i18n.translate(
             'xpack.apm.settings.schema.confirm.checkboxLabel',
             {
-              defaultMessage: `I confirm that I wish to switch to Elastic Agent`,
+              defaultMessage: `I confirm that I wish to switch to gExplorer Agent`,
             }
           )}
           checked={isConfirmChecked}

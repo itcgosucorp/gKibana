@@ -52,7 +52,7 @@ export const MlJobUpgradeModalBody = () => (
             new ML jobs. You're currently running one or more V1/V2 jobs, which
             only work with legacy prebuilt rules. To ensure continued coverage using
             V1/V2 jobs, you may need to duplicate or create new rules before
-            updating your Elastic prebuilt detection rules. Check the documentation
+            updating your gExplorer prebuilt detection rules. Check the documentation
             below for instructions on how to keep using the V1/V2 jobs, and how to
             start using the new V3 jobs."
           />

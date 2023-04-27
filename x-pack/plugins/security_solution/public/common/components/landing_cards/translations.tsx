@@ -10,21 +10,21 @@ import { i18n } from '@kbn/i18n';
 export const SIEM_HEADER = i18n.translate(
   'xpack.securitySolution.overview.landingCards.box.siem.header',
   {
-    defaultMessage: 'Elastic Security',
+    defaultMessage: 'gExplorer Security',
   }
 );
 
 export const SIEM_TITLE = i18n.translate(
   'xpack.securitySolution.overview.landingCards.box.siem.title',
   {
-    defaultMessage: 'Security at the speed of Elastic',
+    defaultMessage: 'Security at the speed of gExplorer',
   }
 );
 export const SIEM_DESCRIPTION = i18n.translate(
   'xpack.securitySolution.overview.landingCards.box.siem.desc',
   {
     defaultMessage:
-      'Elastic Security equips teams to prevent, detect, and respond to threats at cloud speed and scale — securing business operations with a unified, open platform.',
+      'gExplorer Security equips teams to prevent, detect, and respond to threats at cloud speed and scale — securing business operations with a unified, open platform.',
   }
 );
 export const SIEM_CTA = i18n.translate(
@@ -43,7 +43,7 @@ export const ENDPOINT_TITLE = i18n.translate(
 export const ENDPOINT_DESCRIPTION = i18n.translate(
   'xpack.securitySolution.overview.landingCards.box.endpoint.desc',
   {
-    defaultMessage: 'Prevent, collect, detect and respond — all with Elastic Agent.',
+    defaultMessage: 'Prevent, collect, detect and respond — all with gExplorer Agent.',
   }
 );
 
@@ -83,6 +83,6 @@ export const UNIFY_DESCRIPTION = i18n.translate(
   'xpack.securitySolution.overview.landingCards.box.unify.desc',
   {
     defaultMessage:
-      'Elastic Security modernizes security operations — enabling analytics across years of data, automating key processes, and protecting every host.',
+      'gExplorer Security modernizes security operations — enabling analytics across years of data, automating key processes, and protecting every host.',
   }
 );

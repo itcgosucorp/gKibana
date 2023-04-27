@@ -56,7 +56,7 @@ export async function getFooterTemplate({ logo }: GetFooterArgs): Promise<string
     poweredByElasticCopy: i18n.translate(
       'xpack.screenshotting.exportTypes.printablePdf.footer.logoDescription',
       {
-        defaultMessage: 'Powered by Elastic',
+        defaultMessage: 'Powered by gExplorer',
       }
     ),
   });

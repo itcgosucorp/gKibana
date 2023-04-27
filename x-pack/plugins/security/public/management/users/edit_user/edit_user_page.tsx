@@ -137,7 +137,7 @@ export const EditUserPage: FunctionComponent<EditUserPageProps> = ({ username })
             title={
               <FormattedMessage
                 id="xpack.security.management.users.editUserPage.disabledUserWarning"
-                defaultMessage="This user has been deactivated and can't access Elastic."
+                defaultMessage="This user has been deactivated and can't access gExplorer."
               />
             }
           >
@@ -245,7 +245,7 @@ export const EditUserPage: FunctionComponent<EditUserPageProps> = ({ username })
                     <EuiDescriptionListDescription>
                       <FormattedMessage
                         id="xpack.security.management.users.editUserPage.enableUserDescription"
-                        defaultMessage="Allow the user to access Elastic."
+                        defaultMessage="Allow the user to access gExplorer."
                       />
                     </EuiDescriptionListDescription>
                   </EuiDescriptionList>
@@ -278,7 +278,7 @@ export const EditUserPage: FunctionComponent<EditUserPageProps> = ({ username })
                     <EuiDescriptionListDescription>
                       <FormattedMessage
                         id="xpack.security.management.users.editUserPage.disableUserDescription"
-                        defaultMessage="Prevent the user from accessing Elastic."
+                        defaultMessage="Prevent the user from accessing gExplorer."
                       />
                     </EuiDescriptionListDescription>
                   </EuiDescriptionList>
@@ -315,7 +315,7 @@ export const EditUserPage: FunctionComponent<EditUserPageProps> = ({ username })
                       <EuiDescriptionListDescription>
                         <FormattedMessage
                           id="xpack.security.management.users.editUserPage.deleteUserDescription"
-                          defaultMessage="Permanently delete the user and remove access to Elastic."
+                          defaultMessage="Permanently delete the user and remove access to gExplorer."
                         />
                       </EuiDescriptionListDescription>
                     </EuiDescriptionList>

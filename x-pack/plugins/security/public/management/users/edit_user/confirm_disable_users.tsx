@@ -110,7 +110,7 @@ export const ConfirmDisableUsers: FunctionComponent<ConfirmDisableUsersProps> = 
           <p>
             <FormattedMessage
               id="xpack.security.management.users.confirmDisableUsers.description"
-              defaultMessage="{count, plural, one{This user} other{These users}} will no longer be able to access Elastic{count, plural, one{.} other{:}}"
+              defaultMessage="{count, plural, one{This user} other{These users}} will no longer be able to access gExplorer{count, plural, one{.} other{:}}"
               values={{ count: usernames.length }}
             />
           </p>

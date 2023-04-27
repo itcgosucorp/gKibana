@@ -17,7 +17,7 @@ export const featureCatalogueEntry = {
     defaultMessage: 'Plot geographic data.',
   }),
   description: i18n.translate('xpack.maps.feature.appDescription', {
-    defaultMessage: 'Explore geospatial data from Elasticsearch and the Elastic Maps Service.',
+    defaultMessage: 'Explore geospatial data from Elasticsearch and the Elasticsearch Maps Service.',
   }),
   icon: APP_ICON,
   path: '/app/maps',

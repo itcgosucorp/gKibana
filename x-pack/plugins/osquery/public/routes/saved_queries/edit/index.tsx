@@ -94,7 +94,7 @@ const EditSavedQueryPageComponent = () => {
                     <StyledEuiCallOut size="s">
                       <FormattedMessage
                         id="xpack.osquery.viewSavedQuery.prebuiltInfo"
-                        defaultMessage="This is a prebuilt Elastic query, and it cannot be edited."
+                        defaultMessage="This is a prebuilt gExplorer query, and it cannot be edited."
                       />
                     </StyledEuiCallOut>
                   )}

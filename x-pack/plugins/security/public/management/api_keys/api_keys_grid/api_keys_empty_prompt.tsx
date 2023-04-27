@@ -156,7 +156,7 @@ export const ApiKeysEmptyPrompt: FunctionComponent<ApiKeysEmptyPromptProps> = ({
         <p>
           <FormattedMessage
             id="xpack.security.management.apiKeysEmptyPrompt.emptyMessage"
-            defaultMessage="Allow applications to access Elastic on your behalf."
+            defaultMessage="Allow applications to access gExplorer on your behalf."
           />
         </p>
       }

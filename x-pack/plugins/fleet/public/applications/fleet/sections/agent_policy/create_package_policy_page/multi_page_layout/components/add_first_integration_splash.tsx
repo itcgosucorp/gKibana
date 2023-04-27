@@ -94,7 +94,7 @@ const AddIntegrationStepsIllustrations = () => {
           <EuiFlexItem>
             <div style={{ margin: '0 auto' }}>
               <CenteredEuiImage
-                alt="Illustration of installing the Elastic Agent"
+                alt="Illustration of installing the gExplorer Agent"
                 src={assetsBasePath + '1_install_agent.svg'}
               />
             </div>
@@ -104,14 +104,14 @@ const AddIntegrationStepsIllustrations = () => {
               <h4>
                 <FormattedMessage
                   id="xpack.fleet.addFirstIntegrationSplash.installAgentStepTitle"
-                  defaultMessage="Install Elastic Agent"
+                  defaultMessage="Install gExplorer Agent"
                 />
               </h4>
             </EuiText>
             <SubtitleText>
               <FormattedMessage
                 id="xpack.fleet.addFirstIntegrationSplash.installAgentStep"
-                defaultMessage="Install agents on the hosts that you want to connect to Elastic."
+                defaultMessage="Install agents on the hosts that you want to connect to gExplorer."
               />
             </SubtitleText>
           </EuiFlexItem>
@@ -153,7 +153,7 @@ const AddIntegrationStepsIllustrations = () => {
             <SubtitleText>
               <FormattedMessage
                 id="xpack.fleet.addFirstIntegrationSplash.addIntegrationStep"
-                defaultMessage="Make a few selections to finalize how Elastic receives your data."
+                defaultMessage="Make a few selections to finalize how gExplorer receives your data."
               />
             </SubtitleText>
           </EuiFlexItem>
@@ -217,7 +217,7 @@ const CenteredLearnMoreLink = () => {
         <EuiLink href={docLinks.links.fleet.elasticAgent} target="_blank">
           <FormattedMessage
             id="xpack.fleet.addFirstIntegrationSplash.learnMoreLink"
-            defaultMessage="Learn more about installing Elastic Agent"
+            defaultMessage="Learn more about installing gExplorer Agent"
           />
         </EuiLink>
       </EuiFlexItem>
@@ -291,7 +291,7 @@ export const AddFirstIntegrationSplashScreen: React.FC<{
           actionMessage={
             <FormattedMessage
               id="xpack.fleet.addFirstIntegrationSplash.installAgentButton"
-              defaultMessage="Install Elastic Agent"
+              defaultMessage="Install gExplorer Agent"
             />
           }
         />

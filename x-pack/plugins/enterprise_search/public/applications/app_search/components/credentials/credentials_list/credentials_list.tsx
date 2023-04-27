@@ -138,7 +138,7 @@ export const CredentialsList: React.FC = () => {
             </h2>
           }
           body={i18n.translate('xpack.enterpriseSearch.appSearch.credentials.empty.body', {
-            defaultMessage: 'Allow applications to access Elastic App Search on your behalf.',
+            defaultMessage: 'Allow applications to access gExplorer App Search on your behalf.',
           })}
           actions={
             <EuiButton size="s" target="_blank" iconType="popout" href={API_KEYS_DOCS_URL}>

@@ -180,7 +180,7 @@ export class JobsList extends Component {
                 <EuiToolTip
                   content={i18n.translate('xpack.ml.jobsList.managedBadgeTooltip', {
                     defaultMessage:
-                      'This job is preconfigured and managed by Elastic; other parts of the product might have might have dependencies on its behavior.',
+                      'This job is preconfigured and managed by gExplorer; other parts of the product might have might have dependencies on its behavior.',
                   })}
                 >
                   <EuiBadge color="hollow" data-test-subj="mlJobListRowManagedLabel" size="xs">

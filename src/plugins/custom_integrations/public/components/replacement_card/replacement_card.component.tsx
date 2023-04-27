@@ -96,7 +96,7 @@ export const ReplacementCard = ({ replacements }: Props) => {
               <EuiText size="s">
                 <FormattedMessage
                   id="customIntegrations.components.replacementAccordion.recommendationDescription"
-                  defaultMessage="Elastic Agent Integrations are recommended, but you can also use Beats. For more
+                  defaultMessage="gExplorer Agent Integrations are recommended, but you can also use Beats. For more
       details, check out our {link}."
                   values={{
                     link,

@@ -15,7 +15,7 @@ export function SuccessfulMigrationCard() {
     <EuiCard
       icon={<EuiIcon size="xxl" type="checkInCircleFilled" color="success" />}
       title={i18n.translate('xpack.apm.settings.schema.success.title', {
-        defaultMessage: 'Elastic Agent successfully setup!',
+        defaultMessage: 'gExplorer Agent successfully setup!',
       })}
       description={i18n.translate(
         'xpack.apm.settings.schema.success.description',

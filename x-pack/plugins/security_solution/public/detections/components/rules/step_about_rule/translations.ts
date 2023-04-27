@@ -31,7 +31,7 @@ export const ADD_FALSE_POSITIVE = i18n.translate(
 export const GLOBAL_ENDPOINT_EXCEPTION_LIST = i18n.translate(
   'xpack.securitySolution.detectionEngine.createRule.stepAboutRuleForm.endpointExceptionListLabel',
   {
-    defaultMessage: 'Elastic Endpoint exceptions',
+    defaultMessage: 'gExplorer Endpoint exceptions',
   }
 );
 

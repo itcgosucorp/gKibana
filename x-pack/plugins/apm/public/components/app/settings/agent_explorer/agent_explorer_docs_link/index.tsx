@@ -47,7 +47,7 @@ export function AgentExplorerDocsLink({
           title={i18n.translate(
             'xpack.apm.agentExplorer.docsLink.elastic.logo',
             {
-              defaultMessage: 'Elastic logo',
+              defaultMessage: 'gExplorer logo',
             }
           )}
         />

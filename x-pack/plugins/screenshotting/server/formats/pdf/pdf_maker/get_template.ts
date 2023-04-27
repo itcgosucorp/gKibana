@@ -96,7 +96,7 @@ export function getTemplate(
                   text: i18n.translate(
                     'xpack.screenshotting.exportTypes.printablePdf.logoDescription',
                     {
-                      defaultMessage: 'Powered by Elastic',
+                      defaultMessage: 'Powered by gExplorer',
                     }
                   ),
                   fontSize: 10,

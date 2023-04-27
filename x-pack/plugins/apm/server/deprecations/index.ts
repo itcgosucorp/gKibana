@@ -68,7 +68,7 @@ export function getDeprecations({
             }),
             i18n.translate('xpack.apm.deprecations.steps.switch', {
               defaultMessage:
-                'Click "Switch to Elastic Agent". You will be guided through the process',
+                'Click "Switch to gExplorer Agent". You will be guided through the process',
             }),
           ],
         },

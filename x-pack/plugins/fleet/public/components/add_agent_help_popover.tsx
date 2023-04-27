@@ -49,14 +49,14 @@ export const AddAgentHelpPopover = ({
         <EuiText size="m" style={{ width: 302 }}>
           <FormattedMessage
             id="xpack.fleet.addAgentHelpPopover.popoverBody"
-            defaultMessage="For integrations to work successfully, add {elasticAgent} to your host to collect data and send it to Elastic Stack. {learnMoreLink}"
+            defaultMessage="For integrations to work successfully, add {elasticAgent} to your host to collect data and send it to gExplorer Stack. {learnMoreLink}"
             values={{
-              elasticAgent: <strong>Elastic Agent</strong>,
+              elasticAgent: <strong>gExplorer Agent</strong>,
               learnMoreLink: (
                 <EuiLink target="_blank" external href={docLinks.links.fleet.elasticAgent}>
                   <FormattedMessage
                     id="xpack.fleet.addAgentHelpPopover.documentationLink"
-                    defaultMessage="Learn more about Elastic Agent."
+                    defaultMessage="Learn more about gExplorer Agent."
                   />
                 </EuiLink>
               ),

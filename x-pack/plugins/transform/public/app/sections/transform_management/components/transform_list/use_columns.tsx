@@ -123,7 +123,7 @@ export const useColumns = (
             <EuiToolTip
               content={i18n.translate('xpack.transform.transformList.managedBadgeTooltip', {
                 defaultMessage:
-                  'This transform is preconfigured and managed by Elastic; other parts of the product might have might have dependencies on its behavior.',
+                  'This transform is preconfigured and managed by gExplorer; other parts of the product might have might have dependencies on its behavior.',
               })}
             >
               <EuiBadge color="hollow" data-test-subj="transformListRowIsManagedBadge">

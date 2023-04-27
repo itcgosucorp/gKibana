@@ -37,7 +37,7 @@ const NoEprCallout: FunctionComponent<{ statusCode?: number }> = ({
   if (statusCode === 502) {
     titleMessage = i18n.translate('xpack.fleet.epmList.eprUnavailableBadGatewayCalloutTitle', {
       defaultMessage:
-        'Kibana cannot reach the Elastic Package Registry, which provides Elastic Agent integrations\n',
+        'Kibana cannot reach the gExplorer Package Registry, which provides gExplorer Agent integrations\n',
     });
     descriptionMessage = (
       <FormattedMessage
@@ -52,7 +52,7 @@ const NoEprCallout: FunctionComponent<{ statusCode?: number }> = ({
   } else {
     titleMessage = i18n.translate('xpack.fleet.epmList.eprUnavailable400500CalloutTitle', {
       defaultMessage:
-        'Kibana cannot connect to the Elastic Package Registry, which provides Elastic Agent integrations\n',
+        'Kibana cannot connect to the gExplorer Package Registry, which provides gExplorer Agent integrations\n',
     });
     descriptionMessage = (
       <FormattedMessage

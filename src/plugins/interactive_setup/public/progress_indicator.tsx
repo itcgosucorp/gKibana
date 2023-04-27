@@ -87,7 +87,7 @@ export const ProgressIndicator: FunctionComponent<ProgressIndicatorProps> = ({ o
           {
             id: 'unavailable',
             title: i18n.translate('interactiveSetup.progressIndicator.unavailableStepTitle', {
-              defaultMessage: 'Starting Elastic',
+              defaultMessage: 'Starting gExplorer',
             }),
           },
           {

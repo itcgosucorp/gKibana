@@ -124,7 +124,7 @@ Kibana index pattern. It is normally safe to omit this command.',
     CONFIG: {
       OSX_LINUX: {
         title: i18n.translate('home.tutorials.common.functionbeatInstructions.config.osxTitle', {
-          defaultMessage: 'Configure the Elastic cluster',
+          defaultMessage: 'Configure the gExplorer cluster',
         }),
         textPre: i18n.translate(
           'home.tutorials.common.functionbeatInstructions.config.osxTextPre',
@@ -226,7 +226,7 @@ export const createFunctionbeatCloudInstructions = () => ({
       textPre: i18n.translate(
         'home.tutorials.common.functionbeatCloudInstructions.config.osxTextPre',
         {
-          defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+          defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
           values: {
             path: '`functionbeat.yml`',
           },
@@ -245,7 +245,7 @@ export const createFunctionbeatCloudInstructions = () => ({
       textPre: i18n.translate(
         'home.tutorials.common.functionbeatCloudInstructions.config.windowsTextPre',
         {
-          defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+          defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
           values: {
             path: '`C:\\Program Files\\Functionbeat\\functionbeat.yml`',
           },

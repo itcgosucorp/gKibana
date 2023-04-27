@@ -123,7 +123,7 @@ export const API_KEYS_EMPTY_TITLE = i18n.translate(
 export const API_KEYS_EMPTY_BODY = i18n.translate(
   'xpack.enterpriseSearch.workplaceSearch.apiKeys.emptyBody',
   {
-    defaultMessage: 'Allow applications to access Elastic Workplace Search on your behalf.',
+    defaultMessage: 'Allow applications to access gExplorer Workplace Search on your behalf.',
   }
 );
 

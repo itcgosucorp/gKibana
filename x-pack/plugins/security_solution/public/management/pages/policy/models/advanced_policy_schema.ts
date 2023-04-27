@@ -935,7 +935,7 @@ export const AdvancedPolicySchema: AdvancedPolicySchemaType[] = [
     documentation: i18n.translate(
       'xpack.securitySolution.endpoint.policy.advanced.linux.advanced.event_filter.default',
       {
-        defaultMessage: 'Download default event filter rules from Elastic.  Default: true',
+        defaultMessage: 'Download default event filter rules from gExplorer.  Default: true',
       }
     ),
   },
@@ -945,7 +945,7 @@ export const AdvancedPolicySchema: AdvancedPolicySchemaType[] = [
     documentation: i18n.translate(
       'xpack.securitySolution.endpoint.policy.advanced.mac.advanced.event_filter.default',
       {
-        defaultMessage: 'Download default event filter rules from Elastic.  Default: true',
+        defaultMessage: 'Download default event filter rules from gExplorer.  Default: true',
       }
     ),
   },
@@ -955,7 +955,7 @@ export const AdvancedPolicySchema: AdvancedPolicySchemaType[] = [
     documentation: i18n.translate(
       'xpack.securitySolution.endpoint.policy.advanced.windows.advanced.event_filter.default',
       {
-        defaultMessage: 'Download default event filter rules from Elastic.  Default: true',
+        defaultMessage: 'Download default event filter rules from gExplorer.  Default: true',
       }
     ),
   },

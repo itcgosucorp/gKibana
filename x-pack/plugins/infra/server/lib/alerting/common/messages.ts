@@ -180,7 +180,7 @@ export const alertDetailUrlActionVariableDescription = i18n.translate(
   'xpack.infra.metrics.alerting.alertDetailUrlActionVariableDescription',
   {
     defaultMessage:
-      'Link to the view within Elastic that shows further details and context surrounding this alert',
+      'Link to the view within gExplorer that shows further details and context surrounding this alert',
   }
 );
 
