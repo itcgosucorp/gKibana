@@ -144,7 +144,7 @@ export class LoginPage extends Component<Props, State> {
     const logo = customLogo ? (
       <EuiImage src={customLogo} size={40} alt="logo" />
     ) : (
-      <EuiIcon type="logoElastic" size="xxl" />
+      <EuiIcon type="https://i.ibb.co/DQNqCYt/gosu-logo.png" size="xxl" />
     );
     return (
       <div className="loginWelcome login-form">

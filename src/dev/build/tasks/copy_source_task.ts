@@ -25,6 +25,7 @@ export const CopySource: Task = {
       'config/node.options',
       '.i18nrc.json',
       'src/**',
+      'public/**',
 
       'x-pack/plugins/**',
       'x-pack/.i18nrc.json',
@@ -75,6 +76,7 @@ export const CopySource: Task = {
             'src/plugins/data/server/scripts/**',
             'x-pack/plugins/fleet/server/services/epm/packages/**',
             '!x-pack/plugins/fleet/server/services/epm/packages/*.test.ts',
+            'public/**',
           ],
           globbyOptions
         ),

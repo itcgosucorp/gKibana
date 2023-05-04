@@ -57,7 +57,7 @@ export const App: FunctionComponent<AppProps> = ({ onSuccess }) => {
       <header className="interactiveSetup__header eui-textCenter">
         <EuiSpacer size="xxl" />
         <span className="interactiveSetup__logo">
-          <EuiIcon type="logoElastic" size="xxl" />
+          <EuiIcon type="https://i.ibb.co/DQNqCYt/gosu-logo.png" size="xxl" />
         </span>
         <EuiTitle size="m">
           <h1>
