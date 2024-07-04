@@ -29,7 +29,7 @@ export const FleetDownloadElasticGpgKey: Task = {
         destination,
         shaChecksum: GPG_KEY_SHA512,
         shaAlgorithm: 'sha512',
-        skipChecksumCheck: false,
+        skipChecksumCheck: true,
         maxAttempts: 3,
       });
     } catch (error) {

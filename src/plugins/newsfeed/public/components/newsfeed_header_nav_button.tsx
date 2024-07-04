@@ -55,32 +55,6 @@ export const NewsfeedNavButton = ({ newsfeedApi, hasCustomBranding$ }: Props) =>
   return (
     <NewsfeedContext.Provider value={{ setFlyoutVisible, newsFetchResult }}>
       <>
-        <EuiHeaderSectionItemButton
-          ref={setButtonRef}
-          data-test-subj="newsfeed"
-          aria-controls="keyPadMenu"
-          aria-expanded={flyoutVisible}
-          aria-haspopup="true"
-          aria-label={
-            hasNew
-              ? i18n.translate('newsfeed.headerButton.unreadAriaLabel', {
-                  defaultMessage: 'Newsfeed menu - unread items available',
-                })
-              : i18n.translate('newsfeed.headerButton.readAriaLabel', {
-                  defaultMessage: 'Newsfeed menu - all items read',
-                })
-          }
-          notification={hasNew ? true : null}
-          onClick={showFlyout}
-        >
-          <EuiIcon type="cheer" size="m" />
-        </EuiHeaderSectionItemButton>
-        {flyoutVisible ? (
-          <NewsfeedFlyout
-            focusTrapProps={{ shards: [buttonRef] }}
-            showPlainSpinner={hasCustomBranding}
-          />
-        ) : null}
       </>
     </NewsfeedContext.Provider>
   );

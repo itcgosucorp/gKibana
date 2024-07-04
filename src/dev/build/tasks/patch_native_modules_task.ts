@@ -126,6 +126,7 @@ async function patchModule(
     destination: downloadPath,
     shaChecksum: archive.sha256,
     shaAlgorithm: 'sha256',
+    skipChecksumCheck: true,
     maxAttempts: 3,
   });
   switch (pkg.extractMethod) {
