@@ -9,5 +9,5 @@
 import React, { FC } from 'react';
 
 export const Logo: FC = () => (
-  <img src="https://i.ibb.co/DQNqCYt/gosu-logo.png" alt="logo" width="32px" height="32px"/>
+  <img src="https://i.ibb.co/CvFSPhN/GOSU-icon.png" alt="logo" width="32px" height="32px"/>
 );

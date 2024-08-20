@@ -23,7 +23,7 @@ export const TitleComponent: FC<Props> = ({ title }) => (
   <EuiFlexGroup gutterSize="s" justifyContent="flexStart" alignItems="center">
     <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
       <EuiLink href="https://www.elastic.co" title="Powered by Elastic.co">
-        <EuiIcon type="https://i.ibb.co/DQNqCYt/gosu-logo.png" size="l" />
+        <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="l" />
       </EuiLink>
     </EuiFlexItem>
     <EuiFlexItem grow={false} style={{ minWidth: 0, cursor: 'default' }}>

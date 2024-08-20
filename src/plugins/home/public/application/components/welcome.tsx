@@ -72,7 +72,7 @@ export class Welcome extends React.Component<Props> {
             <div className="homWelcome__content eui-textCenter">
               <EuiSpacer size="xl" />
               <span className="homWelcome__logo">
-                <EuiIcon type="https://i.ibb.co/DQNqCYt/gosu-logo.png" size="xxl" />
+                <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="xxl" />
               </span>
               <EuiTitle size="l" className="homWelcome__title">
                 <h1>

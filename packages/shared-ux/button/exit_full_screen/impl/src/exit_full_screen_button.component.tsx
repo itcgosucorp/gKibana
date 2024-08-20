@@ -63,7 +63,7 @@ export const ExitFullScreenButton = ({ onClick, className }: Props) => {
       >
         <EuiFlexGroup component="span" responsive={false} alignItems="center" gutterSize="s">
           <EuiFlexItem component="span" grow={false}>
-            <EuiIcon type="https://i.ibb.co/DQNqCYt/gosu-logo.png" size="m" />
+            <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="m" />
           </EuiFlexItem>
           <EuiFlexItem component="span" grow={false} data-test-subj="exitFullScreenModeText">
             {text}
