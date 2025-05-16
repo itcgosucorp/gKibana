@@ -13,23 +13,23 @@ export const ReplaceFavicon: Task = {
   description: 'Replacing favicons with built version',
 
   async run(config, log, build) {
-    await copy(
-      config.resolveFromRepo(
-        'src/core/packages/apps/server-internal/assets/favicons/favicon.distribution.ico'
-      ),
-      build.resolvePath('src/core/packages/apps/server-internal/assets/favicons/favicon.ico')
-    );
+    // await copy(
+    //   config.resolveFromRepo(
+    //     'src/core/packages/apps/server-internal/assets/favicons/favicon.distribution.ico'
+    //   ),
+    //   build.resolvePath('src/core/packages/apps/server-internal/assets/favicons/favicon.ico')
+    // );
+
+    // await copy(
+    //   config.resolveFromRepo(
+    //     'src/core/packages/apps/server-internal/assets/favicons/favicon.distribution.png'
+    //   ),
+    //   build.resolvePath('src/core/packages/apps/server-internal/assets/favicons/favicon.png')
+    // );
 
     await copy(
       config.resolveFromRepo(
-        'src/core/packages/apps/server-internal/assets/favicons/favicon.distribution.png'
-      ),
-      build.resolvePath('src/core/packages/apps/server-internal/assets/favicons/favicon.png')
-    );
-
-    await copy(
-      config.resolveFromRepo(
-        'src/core/packages/apps/server-internal/assets/favicons/favicon.distribution.svg'
+        'public/images/gosu-logo.svg'
       ),
       build.resolvePath('src/core/packages/apps/server-internal/assets/favicons/favicon.svg')
     );
