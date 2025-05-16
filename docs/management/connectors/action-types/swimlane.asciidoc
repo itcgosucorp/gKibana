@@ -31,6 +31,7 @@ URL:: Swimlane instance URL.
 Application ID:: Swimlane application ID.
 API token::  Swimlane API authentication token for HTTP basic authentication.
 
+
 [float]
 [[swimlane-action-configuration]]
 === Test connectors

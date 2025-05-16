@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import * as Either from 'fp-ts/lib/Either';
@@ -27,7 +26,6 @@ export interface DeleteByQueryParams {
 
 /** @internal */
 export interface DeleteByQueryResponse {
-  type: 'delete_by_query_response';
   taskId: string;
 }
 
@@ -52,7 +50,7 @@ export const deleteByQuery =
         wait_for_completion: false,
       })
       .then(({ task: taskId }) => {
-        return Either.right({ type: 'delete_by_query_response' as const, taskId: String(taskId!) });
+        return Either.right({ taskId: String(taskId!) });
       })
       .catch(catchRetryableEsClientErrors);
   };

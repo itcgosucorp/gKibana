@@ -429,6 +429,27 @@ export default function (providerContext: FtrProviderContext) {
       afterEach(async () => {
         await uninstallPackage('prometheus', '1.17.0');
       });
+
+      it('should allow updating a package policy with only a partial set of experimental datastream features', async () => {
+        await supertest
+          .put(`/api/fleet/package_policies/${packagePolicyId}`)
+          .set('kbn-xsrf', 'xxxx')
+          .send({
+            ...packagePolicyData,
+            package: {
+              ...packagePolicyData.package,
+              experimental_data_stream_features: [
+                {
+                  data_stream: logsTemplateName,
+                  features: {
+                    synthetic_source: true,
+                  },
+                },
+              ],
+            },
+          })
+          .expect(200);
+      });
     });
   });
 }

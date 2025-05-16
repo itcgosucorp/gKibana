@@ -39,6 +39,18 @@ export async function createFailureIssue(
           `[report_failure] output truncated to ${failureMaxCharacters} characters`,
         ].join('\n');
 
+  // Github API body length maximum is 65536 characters
+  // Let's keep consistency with Mocha output that is truncated to 8192 characters
+  const failureMaxCharacters = 8192;
+
+  const failureBody =
+    failure.failure.length <= failureMaxCharacters
+      ? failure.failure
+      : [
+          failure.failure.substring(0, failureMaxCharacters),
+          `[report_failure] output truncated to ${failureMaxCharacters} characters`,
+        ].join('\n');
+
   const body = updateIssueMetadata(
     [
       'A test failed on a tracked branch',

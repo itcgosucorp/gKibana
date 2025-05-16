@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import Path from 'path';
@@ -22,8 +21,6 @@ import { REPO_ROOT } from '@kbn/repo-info';
 import { getEnvOptions } from '@kbn/config-mocks';
 import { LogRecord } from '@kbn/logging';
 import { retryAsync } from '@kbn/core-saved-objects-migration-server-mocks';
-import { delay } from '../test_utils';
-import { EsVersion } from '@kbn/test';
 
 const kibanaVersion = Env.createDefault(REPO_ROOT, getEnvOptions()).packageInfo.version;
 const targetIndex = `.kibana_${kibanaVersion}_001`;
@@ -62,18 +59,8 @@ describe('migration v2', () => {
   let esServer: TestElasticsearchUtils;
   let root: Root;
   let startES: () => Promise<TestElasticsearchUtils>;
-  let dataArchive: string;
 
   beforeAll(async () => {
-    const willRunESv9 = EsVersion.getDefault({ integrationTest: true }).matchRange('9');
-    dataArchive = Path.join(
-      __dirname,
-      '..',
-      'archives',
-      willRunESv9
-        ? '8.18.0_xpack_sample_saved_objects.zip'
-        : '7.14.0_xpack_sample_saved_objects.zip'
-    );
     await removeLogFile();
   });
 
@@ -83,7 +70,12 @@ describe('migration v2', () => {
       settings: {
         es: {
           license: 'basic',
-          dataArchive,
+          dataArchive: Path.join(
+            __dirname,
+            '..',
+            'archives',
+            '7.14.0_xpack_sample_saved_objects.zip'
+          ),
           esArgs: ['http.max_content_length=1715329b'],
         },
       },
@@ -96,8 +88,9 @@ describe('migration v2', () => {
     }
     if (esServer) {
       await esServer.stop();
-      await delay(10);
     }
+
+    await new Promise((resolve) => setTimeout(resolve, 10000));
   });
 
   it('completes the migration even when a full batch would exceed ES http.max_content_length', async () => {
@@ -125,7 +118,7 @@ describe('migration v2', () => {
     await root.preboot();
     await root.setup();
     await expect(root.start()).rejects.toMatchInlineSnapshot(
-      `[Error: Unable to complete saved object migrations for the [.kibana] index: The document with _id "canvas-workpad-template:workpad-template-061d7868-2b4e-4dc8-8bf7-3772b52926e5" is 1715319 bytes which exceeds the configured maximum batch size of 1015275 bytes. To proceed, please increase the 'migrations.maxBatchSizeBytes' Kibana configuration option and ensure that the Elasticsearch 'http.max_content_length' configuration option is set to an equal or larger value.]`
+      `[Error: Unable to complete saved object migrations for the [.kibana] index: The document with _id "canvas-workpad-template:workpad-template-061d7868-2b4e-4dc8-8bf7-3772b52926e5" is 1715272 bytes which exceeds the configured maximum batch size of 1015275 bytes. To proceed, please increase the 'migrations.maxBatchSizeBytes' Kibana configuration option and ensure that the Elasticsearch 'http.max_content_length' configuration option is set to an equal or larger value.]`
     );
 
     await retryAsync(
@@ -138,7 +131,7 @@ describe('migration v2', () => {
         expect(
           records.find((rec) =>
             rec.message.startsWith(
-              `Reason: Unable to complete saved object migrations for the [.kibana] index: The document with _id "canvas-workpad-template:workpad-template-061d7868-2b4e-4dc8-8bf7-3772b52926e5" is 1715319 bytes which exceeds the configured maximum batch size of 1015275 bytes. To proceed, please increase the 'migrations.maxBatchSizeBytes' Kibana configuration option and ensure that the Elasticsearch 'http.max_content_length' configuration option is set to an equal or larger value.`
+              `Unable to complete saved object migrations for the [.kibana] index: The document with _id "canvas-workpad-template:workpad-template-061d7868-2b4e-4dc8-8bf7-3772b52926e5" is 1715272 bytes which exceeds the configured maximum batch size of 1015275 bytes. To proceed, please increase the 'migrations.maxBatchSizeBytes' Kibana configuration option and ensure that the Elasticsearch 'http.max_content_length' configuration option is set to an equal or larger value.`
             )
           )
         ).toBeDefined();

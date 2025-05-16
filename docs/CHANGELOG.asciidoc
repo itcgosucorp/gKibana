@@ -6263,7 +6263,6 @@ The agent policy saved object no longer includes the `package_policies` field.
 To review the breaking changes in previous versions, refer to the following:
 
 {kibana-ref-all}/8.4/release-notes-8.4.0.html#breaking-changes-8.4.0[8.4.0] | {kibana-ref-all}/8.3/release-notes-8.3.0.html#breaking-changes-8.3.0[8.3.0] | {kibana-ref-all}/8.2/release-notes-8.2.0.html#breaking-changes-8.2.0[8.2.0] | {kibana-ref-all}/8.1/release-notes-8.1.0.html#breaking-changes-8.1.0[8.1.0] | {kibana-ref-all}/8.0/release-notes-8.0.0.html#breaking-changes-8.0.0[8.0.0] | {kibana-ref-all}/8.0/release-notes-8.0.0-rc2.html#breaking-changes-8.0.0-rc2[8.0.0-rc2] | {kibana-ref-all}/8.0/release-notes-8.0.0-rc1.html#breaking-changes-8.0.0-rc1[8.0.0-rc1] | {kibana-ref-all}/8.0/release-notes-8.0.0-beta1.html#breaking-changes-8.0.0-beta1[8.0.0-beta1] | {kibana-ref-all}/8.0/release-notes-8.0.0-alpha2.html#breaking-changes-8.0.0-alpha2[8.0.0-alpha2] | {kibana-ref-all}/8.0/release-notes-8.0.0-alpha1.html#breaking-changes-8.0.0-alpha1[8.0.0-alpha1]
-
 [float]
 [[features-8.5.0]]
 === Features
@@ -6771,7 +6770,6 @@ For more information, refer to {kibana-pull}136422[#136422].
 *Impact* +
 To authenticate interactive users via a web browser, use <<kibana-authentication,another authentication method>>. Use API keys only for programmatic access to {kib} and {es}.
 ====
-
 [float]
 [[features-8.4.0]]
 === Features
@@ -6842,7 +6840,6 @@ For more information about the features introduced in 8.4.0, refer to <<whats-ne
 === Enhancements and bug fixes
 
 For detailed information about the 8.4.0 release, review the enhancements and bug fixes.
-
 [float]
 [[enhancement-v8.4.0]]
 === Enhancements
@@ -10012,3 +10009,4 @@ The 8.0.0-alpha1 release includes the following bug fix.
 
 Operations::
 * Moves systemd service to /usr/lib/systemd/system {kibana-pull}83571[#83571]
+//////////////////

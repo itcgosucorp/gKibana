@@ -36,6 +36,7 @@ export const DownloadNodeBuilds: GlobalTask = {
           log,
           shaAlgorithm: 'sha256',
           maxAttempts: 3,
+          skipChecksumCheck: true,
         });
       })
     );

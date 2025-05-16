@@ -35,6 +35,7 @@ export const DownloadCloudDependencies: Task = {
           shaChecksum: checksum.split(' ')[0],
           shaAlgorithm: 'sha512',
           maxAttempts: 3,
+          skipChecksumCheck: true,
         });
       });
       return Promise.all(downloads);

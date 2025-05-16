@@ -5,37 +5,13 @@
  * 2.0.
  */
 
+import type { RuleActionThrottle } from '@kbn/securitysolution-io-ts-alerting-types';
+
 import type { Connectors } from './connector';
 
 export type CreateRulePropsRewrites<CreateRuleProps> = Partial<Exclude<CreateRuleProps, 'type'>>;
 
 export interface Actions {
+  throttle: RuleActionThrottle;
   connectors: Connectors[];
-}
-
-export interface AlertsFilter {
-  query: {
-    kql: string;
-  };
-  timeframe: {
-    days: number[];
-    timezone: string;
-    hours: {
-      start: string;
-      end: string;
-    };
-  };
-}
-
-export interface SecurityEvent {
-  [field: string]: unknown;
-  '@timestamp': number;
-  ecs: {
-    version: string;
-  };
-  event: {
-    kind: 'event';
-    category: string;
-    type: string;
-  };
 }

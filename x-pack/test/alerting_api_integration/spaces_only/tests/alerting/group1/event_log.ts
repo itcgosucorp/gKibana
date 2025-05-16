@@ -827,6 +827,11 @@ export default function eventLogTests({ getService }: FtrProviderContext) {
                       notify_when: RuleNotifyWhen.CHANGE,
                     },
                   },
+                  {
+                    id: createdAction.id,
+                    group: 'recovered',
+                    params: {},
+                  },
                 ],
                 alert_delay: {
                   active: 1,

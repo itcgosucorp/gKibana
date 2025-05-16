@@ -14,6 +14,8 @@ export default function ({ getService, getPageObjects }: FtrProviderContext) {
   const browser = getService('browser');
   const dataGrid = getService('dataGrid');
   const dashboardAddPanel = getService('dashboardAddPanel');
+  const dashboardPanelActions = getService('dashboardPanelActions');
+  const dashboardReplacePanel = getService('dashboardReplacePanel');
   const filterBar = getService('filterBar');
   const queryBar = getService('queryBar');
   const esArchiver = getService('esArchiver');

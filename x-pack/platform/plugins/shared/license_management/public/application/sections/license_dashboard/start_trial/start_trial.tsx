@@ -93,7 +93,7 @@ export class StartTrial extends Component<Props, State> {
                 <p>
                   <FormattedMessage
                     id="xpack.licenseMgmt.licenseDashboard.startTrial.confirmModalDescription"
-                    defaultMessage="This trial is for the full set of {subscriptionFeaturesLinkText} of the Elastic Stack.
+                    defaultMessage="This trial is for the full set of {subscriptionFeaturesLinkText} of the gExplorer Stack.
                       You'll get immediate access to:"
                     values={{
                       subscriptionFeaturesLinkText: (

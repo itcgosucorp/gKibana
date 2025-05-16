@@ -7,13 +7,6 @@
 
 import { i18n } from '@kbn/i18n';
 
-export const DESCRIPTION = i18n.translate(
-  'xpack.threatIntelligence.indicatorNameFieldDescription',
-  {
-    defaultMessage: 'Indicator display name generated in the runtime ',
-  }
-);
-
 export const INSPECT_BUTTON_TITLE = i18n.translate('xpack.threatIntelligence.inspectTitle', {
   defaultMessage: 'Inspect',
 });

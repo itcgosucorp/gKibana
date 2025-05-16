@@ -61,8 +61,6 @@ export default function createFindTests({ getService }: FtrProviderContext) {
               })
             )
             .expect(200);
-          objectRemover.add(space.id, createdAlert.id, 'rule', 'alerting');
-
           const response = await supertestWithoutAuth
             .get(
               `${getUrlPrefix(

@@ -218,20 +218,6 @@ NOTE: The `xpack.fleet.outputs` settings are intended for advanced configuration
 +
 .Properties of `ssl`
 [%collapsible%open]
-=======
-  `certificate`:::: 
-    The SSL certificate that {agents} use to authenticate with the output. Include the full contents of the certificate here.
-=======
-
-  `secrets`::: 
-    Include here any values for preconfigured outputs that should be stored as secrets. A secret value is replaced in the `kibana.yml` settings file with a reference, with the original value stored externally as a secure hash. Note that this type of secret storage requires all configured {fleet-server}s to be on version 8.12.0 or later.
-+
-.Properties of `secrets`
-[%collapsible%open]
-=======
-  `key`:::::
-    The private certificate key that {agents} use to authenticate with the output.
-=======
 =====
 +
 Example `xpack.fleet.outputs` configuration:

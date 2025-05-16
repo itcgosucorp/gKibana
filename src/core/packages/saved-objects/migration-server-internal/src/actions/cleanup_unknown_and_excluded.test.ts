@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import * as Either from 'fp-ts/lib/Either';
@@ -65,7 +64,6 @@ describe('cleanupUnknownAndExcluded', () => {
     );
     mockDeleteByQuery.mockReturnValueOnce(async () =>
       Either.right({
-        type: 'delete_by_query_response',
         taskId: '1234',
       })
     );
@@ -133,7 +131,6 @@ describe('cleanupUnknownAndExcluded', () => {
       );
       mockDeleteByQuery.mockReturnValueOnce(async () =>
         Either.right({
-          type: 'delete_by_query_response',
           taskId: '1234',
         })
       );
@@ -175,7 +172,6 @@ describe('cleanupUnknownAndExcluded', () => {
       );
       mockDeleteByQuery.mockReturnValueOnce(async () =>
         Either.right({
-          type: 'delete_by_query_response',
           taskId: '1234',
         })
       );
@@ -227,7 +223,6 @@ describe('cleanupUnknownAndExcluded', () => {
     );
     mockDeleteByQuery.mockReturnValueOnce(async () =>
       Either.right({
-        type: 'delete_by_query_response',
         taskId: '1234',
       })
     );
@@ -276,35 +271,6 @@ describe('cleanupUnknownAndExcluded', () => {
       taskId: '1234',
       unknownDocs,
       errorsByType,
-    });
-  });
-
-  it('returns cleanup_not_needed if the conditions for the query are empty (removedTypes, unknownDocs and filterClauses)', async () => {
-    mockCheckForUnknownDocs.mockReturnValueOnce(async () => Either.right({}));
-    mockCalculateExcludeFilters.mockReturnValueOnce(async () =>
-      Either.right({
-        filterClauses: [],
-        errorsByType: {},
-      })
-    );
-
-    const task = cleanupUnknownAndExcluded({
-      client: emptyResponseClientMock,
-      indexName: '.kibana_8.0.0',
-      discardUnknownDocs: false,
-      excludeOnUpgradeQuery: initialExcludeOnUpgradeQueryMock,
-      excludeFromUpgradeFilterHooks,
-      hookTimeoutMs: 50,
-      knownTypes: ['foo', 'bar'],
-      removedTypes: [],
-    });
-
-    const result = await task();
-
-    expect(Either.isRight(result)).toBe(true);
-    expect(deleteByQuery).toHaveBeenCalledTimes(0);
-    expect((result as Either.Right<any>).right).toEqual({
-      type: 'cleanup_not_needed' as const,
     });
   });
 });

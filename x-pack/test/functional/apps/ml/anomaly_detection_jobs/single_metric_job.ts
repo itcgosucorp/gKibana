@@ -88,6 +88,14 @@ export default function ({ getService }: FtrProviderContext) {
     },
   ];
 
+  const fieldStatsEntries = [
+    {
+      fieldName: '@version.keyword',
+      type: 'keyword' as FieldStatsType,
+      expectedValues: ['1'],
+    },
+  ];
+
   describe('single metric', function () {
     this.tags(['ml']);
     before(async () => {

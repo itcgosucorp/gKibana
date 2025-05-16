@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import Path from 'path';
@@ -16,7 +15,6 @@ import { Env } from '@kbn/config';
 import { getEnvOptions } from '@kbn/config-mocks';
 import { ElasticsearchClient } from '@kbn/core-elasticsearch-server';
 import type { SavedObjectsRawDoc } from '@kbn/core-saved-objects-server';
-import { modelVersionToVirtualVersion } from '@kbn/core-saved-objects-base-server-internal';
 import {
   createTestServers,
   createRootWithCorePlugins,
@@ -24,7 +22,6 @@ import {
 } from '@kbn/core-test-helpers-kbn-server';
 import { InternalCoreStart } from '@kbn/core-lifecycle-server-internal';
 import { Root } from '@kbn/core-root-server-internal';
-import { EsVersion } from '@kbn/test';
 
 const kibanaVersion = Env.createDefault(REPO_ROOT, getEnvOptions()).packageInfo.version;
 
@@ -60,11 +57,7 @@ async function fetchDocuments(esClient: ElasticsearchClient, index: string) {
     .sort(sortByTypeAndId);
 }
 
-const willRunESv8 = EsVersion.getDefault({ integrationTest: true }).matchRange('8');
-
-const describeIf = willRunESv8 ? describe : describe.skip;
-
-describeIf('migrating from 7.3.0-xpack which used v1 migrations', () => {
+describe('migrating from 7.3.0-xpack which used v1 migrations', () => {
   const migratedIndex = `.kibana_${kibanaVersion}_001`;
   const originalIndex = `.kibana_1`; // v1 migrations index
 
@@ -132,22 +125,14 @@ describeIf('migrating from 7.3.0-xpack which used v1 migrations', () => {
       .getTypeRegistry()
       .getAllTypes()
       .reduce((versionMap, type) => {
-        const { name, migrations, convertToMultiNamespaceTypeVersion, modelVersions } = type;
+        const { name, migrations, convertToMultiNamespaceTypeVersion } = type;
         if (migrations || convertToMultiNamespaceTypeVersion) {
           const migrationsMap = typeof migrations === 'function' ? migrations() : migrations;
           const migrationsKeys = migrationsMap ? Object.keys(migrationsMap) : [];
           if (convertToMultiNamespaceTypeVersion) {
-            // Setting this option registers a conversion migration that is reflected in the object's `typeMigrationVersions` field
+            // Setting this option registers a conversion migration that is reflected in the object's `migrationVersions` field
             migrationsKeys.push(convertToMultiNamespaceTypeVersion);
           }
-
-          const modelVersionCreateSchemas =
-            typeof modelVersions === 'function' ? modelVersions() : modelVersions ?? {};
-
-          Object.entries(modelVersionCreateSchemas).forEach(([key, modelVersion]) => {
-            migrationsKeys.push(modelVersionToVirtualVersion(key));
-          });
-
           const highestVersion = migrationsKeys.sort(Semver.compare).reverse()[0];
           return {
             ...versionMap,
@@ -165,8 +150,9 @@ describeIf('migrating from 7.3.0-xpack which used v1 migrations', () => {
     doc: SavedObjectsRawDoc,
     expectedVersions: Record<string, string | undefined>
   ) => {
+    const migrationVersions = doc._source.migrationVersion;
     const type = doc._source.type;
-    expect(doc._source.typeMigrationVersion).toEqual(expectedVersions[type]);
+    expect(migrationVersions ? migrationVersions[type] : undefined).toEqual(expectedVersions[type]);
   };
 
   const stopServers = async () => {
@@ -176,6 +162,8 @@ describeIf('migrating from 7.3.0-xpack which used v1 migrations', () => {
     if (esServer) {
       await esServer.stop();
     }
+
+    await new Promise((resolve) => setTimeout(resolve, 10000));
   };
 
   beforeAll(async () => {

@@ -10,21 +10,21 @@ import { i18n } from '@kbn/i18n';
 export const PRE_BUILT_TITLE = i18n.translate(
   'xpack.osquery.packList.prePackagedPacks.emptyPromptTitle',
   {
-    defaultMessage: 'Load Elastic prebuilt packs',
+    defaultMessage: 'Load gExplorer prebuilt packs',
   }
 );
 
 export const LOAD_PREBUILT_PACKS_BUTTON = i18n.translate(
   'xpack.osquery.packList.prePackagedPacks.loadButtonLabel',
   {
-    defaultMessage: 'Load Elastic prebuilt packs',
+    defaultMessage: 'Load gExplorer prebuilt packs',
   }
 );
 
 export const UPDATE_PREBUILT_PACKS_BUTTON = i18n.translate(
   'xpack.osquery.packList.prePackagedPacks.updateButtonLabel',
   {
-    defaultMessage: 'Update Elastic prebuilt packs',
+    defaultMessage: 'Update gExplorer prebuilt packs',
   }
 );
 

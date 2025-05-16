@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import Path from 'path';
@@ -34,7 +33,12 @@ const { startES } = createTestServers({
   settings: {
     es: {
       license: 'basic',
-      dataArchive: Path.join(__dirname, '..', 'archives', '8.4.0_with_sample_data_logs.zip'),
+      dataArchive: Path.join(
+        __dirname,
+        '..',
+        'archives',
+        '8.0.0_v1_migrations_sample_data_saved_objects.zip'
+      ),
     },
   },
 });
@@ -121,9 +125,7 @@ describe('incompatible_cluster_routing_allocation', () => {
     await root.preboot();
     await root.setup();
 
-    const startPromise = root.start().catch(() => {
-      // Silent catch because the test might be done and call shutdown before starting is completed, causing unwanted thrown errors.
-    });
+    root.start();
 
     // Wait for the INIT -> INIT action retry
     await retryAsync(
@@ -159,13 +161,12 @@ describe('incompatible_cluster_routing_allocation', () => {
           .map((str) => JSON5.parse(str)) as LogRecord[];
 
         expect(
-          records.find((rec) => rec.message.includes('MARK_VERSION_INDEX_READY_SYNC -> DONE'))
+          records.find((rec) => rec.message.includes('MARK_VERSION_INDEX_READY -> DONE'))
         ).toBeDefined();
       },
       { retryAttempts: 100, retryDelayMs: 500 }
     );
 
-    await startPromise; // Wait for start phase to complete before shutting down
     await root.shutdown();
   });
 });

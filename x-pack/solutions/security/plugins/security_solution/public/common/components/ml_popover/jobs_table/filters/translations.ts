@@ -31,7 +31,7 @@ export const NO_GROUPS_AVAILABLE = i18n.translate(
 export const SHOW_ELASTIC_JOBS = i18n.translate(
   'xpack.securitySolution.components.mlPopover.jobsTable.filters.showAllJobsLabel',
   {
-    defaultMessage: 'Elastic jobs',
+    defaultMessage: 'gExplorer jobs',
   }
 );
 

@@ -1,10 +1,9 @@
 /*
  * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
- * or more contributor license agreements. Licensed under the "Elastic License
- * 2.0", the "GNU Affero General Public License v3.0 only", and the "Server Side
- * Public License v 1"; you may not use this file except in compliance with, at
- * your election, the "Elastic License 2.0", the "GNU Affero General Public
- * License v3.0 only", or the "Server Side Public License, v 1".
+ * or more contributor license agreements. Licensed under the Elastic License
+ * 2.0 and the Server Side Public License, v 1; you may not use this file except
+ * in compliance with, at your election, the Elastic License 2.0 or the Server
+ * Side Public License, v 1.
  */
 
 import * as Either from 'fp-ts/lib/Either';
@@ -46,10 +45,6 @@ export interface CleanupStarted {
   taskId: string;
 }
 
-export interface CleanupNotNeeded {
-  type: 'cleanup_not_needed';
-}
-
 /**
  * Cleans up unknown and excluded types from the specified index.
  */
@@ -64,7 +59,7 @@ export const cleanupUnknownAndExcluded = ({
   removedTypes,
 }: CleanupUnknownAndExcludedParams): TaskEither.TaskEither<
   RetryableEsClientError | UnknownDocsFound,
-  CleanupStarted | CleanupNotNeeded
+  CleanupStarted
 > => {
   let unknownDocs: DocumentIdAndType[] = [];
   let unknownDocTypes: string[] = [];
@@ -96,51 +91,43 @@ export const cleanupUnknownAndExcluded = ({
     ),
 
     // actively delete unwanted documents
-    TaskEither.chainW(
-      (
-        excludeFiltersRes
-      ): TaskEither.TaskEither<RetryableEsClientError, CleanupStarted | CleanupNotNeeded> => {
-        errorsByType = excludeFiltersRes.errorsByType;
+    TaskEither.chainW((excludeFiltersRes) => {
+      errorsByType = excludeFiltersRes.errorsByType;
 
-        // we must delete everything that matches:
-        // - any of the plugin-defined exclude filters
-        // - OR any of the unknown types
-        const shouldClauses = [
-          ...excludeFiltersRes.filterClauses,
-          ...removedTypes.map((type) => ({ term: { type } })),
-          ...unknownDocTypes.map((type) => ({ term: { type } })),
-        ];
+      // we must delete everything that matches:
+      // - any of the plugin-defined exclude filters
+      // - OR any of the unknown types
+      const deleteQuery: QueryDslQueryContainer = {
+        bool: {
+          should: [
+            ...excludeFiltersRes.filterClauses,
+            ...removedTypes.map((type) => ({ term: { type } })),
+            ...unknownDocTypes.map((type) => ({ term: { type } })),
+          ],
+        },
+      };
 
-        if (shouldClauses.length === 0) {
-          return TaskEither.right({
-            type: 'cleanup_not_needed' as const,
-          });
-        }
+      return deleteByQuery({
+        client,
+        indexName,
+        query: deleteQuery,
+        // we want to delete as many docs as we can in the current attempt
+        conflicts: 'proceed',
+        // instead of forcing refresh after each delete attempt,
+        // we opt for a delayRetry mechanism when conflicts appear,
+        // letting the periodic refresh kick in
+        refresh: false,
+      });
+    }),
 
-        const deleteQuery: QueryDslQueryContainer = {
-          bool: {
-            should: shouldClauses,
-          },
-        };
-
-        return pipe(
-          deleteByQuery({
-            client,
-            indexName,
-            query: deleteQuery,
-            conflicts: 'proceed',
-            refresh: false,
-          }),
-          TaskEither.chainEitherKW((res) => {
-            return Either.right({
-              type: 'cleanup_started' as const,
-              taskId: res.taskId,
-              unknownDocs,
-              errorsByType,
-            });
-          })
-        );
-      }
-    )
+    // map response output
+    TaskEither.chainEitherKW((res) => {
+      return Either.right({
+        type: 'cleanup_started' as const,
+        taskId: res.taskId,
+        unknownDocs,
+        errorsByType,
+      });
+    })
   );
 };

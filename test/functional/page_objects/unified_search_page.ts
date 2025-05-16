@@ -13,6 +13,7 @@ export class UnifiedSearchPageObject extends FtrService {
   private readonly retry = this.ctx.getService('retry');
   private readonly testSubjects = this.ctx.getService('testSubjects');
   private readonly find = this.ctx.getService('find');
+  private readonly comboBox = this.ctx.getService('comboBox');
 
   public async switchDataView(switchButtonSelector: string, dataViewTitle: string) {
     await this.testSubjects.click(switchButtonSelector);
