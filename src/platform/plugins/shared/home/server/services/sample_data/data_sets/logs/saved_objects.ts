@@ -304,7 +304,7 @@ export const getSavedObjects = (): SavedObject[] => [
       kibanaSavedObjectMeta: {
         searchSourceJSON: '{"query":{"language":"kuery","query":""},"filter":[]}',
       },
-      description: "Analyze mock web traffic log data for Elastic's website",
+      description: "Analyze mock web traffic log data for gExplorer's website",
       refreshInterval: {
         pause: true,
         value: 60000,

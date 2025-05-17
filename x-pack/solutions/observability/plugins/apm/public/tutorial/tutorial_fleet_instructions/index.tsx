@@ -100,7 +100,7 @@ function TutorialFleetInstructions({ http, basePath, isDarkTheme, kibanaVersion 
             display="plain"
             textAlign="left"
             title={i18n.translate('xpack.apm.tutorial.apmServer.fleet.title', {
-              defaultMessage: 'Elastic APM now available in Fleet!',
+              defaultMessage: 'gExplorer APM now available in Fleet!',
             })}
             description={i18n.translate('xpack.apm.tutorial.apmServer.fleet.message', {
               defaultMessage:
@@ -125,7 +125,7 @@ function TutorialFleetInstructions({ http, basePath, isDarkTheme, kibanaVersion 
                       'xpack.apm.tutorial.apmServer.fleet.apmIntegration.description',
                       {
                         defaultMessage:
-                          'Fleet allows you to centrally manage Elastic Agents running the APM integration. The default option is to install a Fleet Server on a dedicated host. For setups without a dedicated host, we recommend following the instructions to install the standalone APM Server for your operating system by selecting the respective tab above.',
+                          'Fleet allows you to centrally manage gExplorer Agents running the APM integration. The default option is to install a Fleet Server on a dedicated host. For setups without a dedicated host, we recommend following the instructions to install the standalone APM Server for your operating system by selecting the respective tab above.',
                       }
                     )}
                   </p>

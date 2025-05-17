@@ -107,7 +107,7 @@ export const NoDataPage: FunctionComponent<NoDataPageProps> = ({
   const title =
     pageTitle ||
     i18n.translate('kibana-react.noDataPage.welcomeTitle', {
-      defaultMessage: 'Welcome to Elastic {solution}!',
+      defaultMessage: 'Welcome to gExplorer {solution}!',
       values: { solution },
     });
 

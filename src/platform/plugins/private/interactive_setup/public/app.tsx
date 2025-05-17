@@ -58,13 +58,13 @@ export const App: FunctionComponent<AppProps> = ({ onSuccess }) => {
       <header className="interactiveSetup__header eui-textCenter">
         <EuiSpacer size="xxl" />
         <span className="interactiveSetup__logo">
-          <EuiIcon type="logoElastic" size="xxl" />
+          <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="xxl" />
         </span>
         <EuiTitle size="m">
           <h1>
             <FormattedMessage
               id="interactiveSetup.app.pageTitle"
-              defaultMessage="Configure Elastic to get started"
+              defaultMessage="Configure gExplorer to get started"
             />
           </h1>
         </EuiTitle>

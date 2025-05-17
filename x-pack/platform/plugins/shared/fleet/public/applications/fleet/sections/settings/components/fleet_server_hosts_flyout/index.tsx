@@ -85,7 +85,7 @@ export const FleetServerHostsFlyout: React.FunctionComponent<FleetServerHostsFly
               <EuiText color="subdued">
                 <FormattedMessage
                   id="xpack.fleet.settings.fleetServerHostsFlyout.serverlessInfoText"
-                  defaultMessage="You may create another Fleet Server definition reachable via a proxy. In context of the serverless project, Fleet Service is managed by Elastic. Creation of a new one is therefore not permitted."
+                  defaultMessage="You may create another Fleet Server definition reachable via a proxy. In context of the serverless project, Fleet Service is managed by gExplorer. Creation of a new one is therefore not permitted."
                 />
               </EuiText>
             </>
@@ -107,7 +107,7 @@ export const FleetServerHostsFlyout: React.FunctionComponent<FleetServerHostsFly
           >
             <FormattedMessage
               id="xpack.fleet.settings.fleetServerHostsFlyout.warningCalloutDescription"
-              defaultMessage="Invalid settings can break the connection between Elastic Agent and Fleet Server. If this happens, you will need to re-enroll your agents."
+              defaultMessage="Invalid settings can break the connection between gExplorer Agent and Fleet Server. If this happens, you will need to re-enroll your agents."
             />
           </EuiCallOut>
         )}
@@ -142,7 +142,7 @@ export const FleetServerHostsFlyout: React.FunctionComponent<FleetServerHostsFly
                   <EuiText color="subdued" size="relative">
                     <FormattedMessage
                       id="xpack.fleet.settings.fleetServerHostsFlyout.description"
-                      defaultMessage="Specify multiple URLs to scale out your deployment and provide automatic failover. If multiple URLs exist, Fleet shows the first provided URL for enrollment purposes. Enrolled Elastic Agents will connect to the URLs in round robin order until they connect successfully. For more information, see the {link} ."
+                      defaultMessage="Specify multiple URLs to scale out your deployment and provide automatic failover. If multiple URLs exist, Fleet shows the first provided URL for enrollment purposes. Enrolled gExplorer Agents will connect to the URLs in round robin order until they connect successfully. For more information, see the {link} ."
                       values={{
                         link: (
                           <EuiLink
@@ -152,7 +152,7 @@ export const FleetServerHostsFlyout: React.FunctionComponent<FleetServerHostsFly
                           >
                             <FormattedMessage
                               id="xpack.fleet.settings.fleetServerHostsFlyout.userGuideLink"
-                              defaultMessage="Fleet and Elastic Agent Guide"
+                              defaultMessage="Fleet and gExplorer Agent Guide"
                             />
                           </EuiLink>
                         ),

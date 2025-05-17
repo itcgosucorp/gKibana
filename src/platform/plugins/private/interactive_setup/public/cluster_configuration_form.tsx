@@ -298,7 +298,7 @@ export const ClusterConfigurationForm: FunctionComponent<ClusterConfigurationFor
           >
             <FormattedMessage
               id="interactiveSetup.clusterConfigurationForm.submitButton"
-              defaultMessage="{isSubmitting, select, true{Configuring Elastic…} other{Configure Elastic}}"
+              defaultMessage="{isSubmitting, select, true{Configuring gExplorer…} other{Configure gExplorer}}"
               values={{ isSubmitting: form.isSubmitting }}
             />
           </EuiButton>

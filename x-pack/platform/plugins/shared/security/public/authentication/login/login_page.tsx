@@ -82,7 +82,7 @@ const loginFormMessages: Record<LogoutReason, NonNullable<LoginFormProps['messag
   LOGGED_OUT: {
     type: LoginFormMessageType.Info,
     content: i18n.translate('xpack.security.login.loggedOutDescription', {
-      defaultMessage: 'You have logged out of Elastic.',
+      defaultMessage: 'You have logged out of gExplorer.',
     }),
   },
   UNAUTHENTICATED: {
@@ -150,7 +150,7 @@ export class LoginPage extends Component<Props, State> {
     const logo = customLogo ? (
       <EuiImage src={customLogo} size={40} alt="logo" />
     ) : (
-      <EuiIcon type="logoElastic" size="xxl" />
+      <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="xxl" />
     );
     // custom logo needs to be centered
     const logoStyle = customLogo ? { padding: 0 } : {};
@@ -166,7 +166,7 @@ export class LoginPage extends Component<Props, State> {
               <h1>
                 <FormattedMessage
                   id="xpack.security.loginPage.welcomeTitle"
-                  defaultMessage="Welcome to Elastic"
+                  defaultMessage="Welcome to gExplorer"
                 />
               </h1>
             </EuiTitle>
@@ -279,7 +279,7 @@ export class LoginPage extends Component<Props, State> {
           title={
             <FormattedMessage
               id="xpack.security.loginPage.requiresCookiesTitle"
-              defaultMessage="Cookies are required to log in to Elastic"
+              defaultMessage="Cookies are required to log in to gExplorer"
             />
           }
           message={

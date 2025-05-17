@@ -75,7 +75,7 @@ export const App = ({ http, token }: { http: HttpSetup; token?: string }) => {
   if (!isSetupModeActive) {
     return (
       <EuiPageTemplate restrictWidth={false}>
-        <EuiPageTemplate.Header iconType="logoElastic" pageTitle="Welcome to Elastic" />
+        <EuiPageTemplate.Header iconType="logoElastic" pageTitle="Welcome to gExplorer" />
         <EuiPageTemplate.Section>
           <EuiPanel>
             <EuiText>Kibana server is not ready yet.</EuiText>
@@ -87,7 +87,7 @@ export const App = ({ http, token }: { http: HttpSetup; token?: string }) => {
 
   return (
     <EuiPageTemplate restrictWidth={false}>
-      <EuiPageTemplate.Header iconType="logoElastic" pageTitle="Welcome to Elastic" />
+      <EuiPageTemplate.Header iconType="logoElastic" pageTitle="Welcome to gExplorer" />
       <EuiPageTemplate.Section>
         <EuiPanel>
           <EuiFlexGroup>

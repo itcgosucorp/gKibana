@@ -42,7 +42,7 @@ export function AgentExplorerDocsLink({ agentName, repositoryUrl }: AgentExplore
           type="logoElastic"
           size="m"
           title={i18n.translate('xpack.apm.agentExplorer.docsLink.elastic.logo', {
-            defaultMessage: 'Elastic logo',
+            defaultMessage: 'gExplorer logo',
           })}
         />
       )}{' '}

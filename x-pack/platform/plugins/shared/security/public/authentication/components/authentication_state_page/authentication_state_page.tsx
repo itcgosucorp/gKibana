@@ -26,7 +26,7 @@ export const AuthenticationStatePage: FC<PropsWithChildren<Props>> = (props) => 
           {props.logo ? (
             <EuiImage src={props.logo} size={40} alt={'logo'} />
           ) : (
-            <EuiIcon type="logoElastic" size="xxl" />
+            <EuiIcon type="https://i.ibb.co/CvFSPhN/GOSU-icon.png" size="xxl" />
           )}
         </span>
         <EuiTitle size="l" className="secAuthenticationStatePage__title">

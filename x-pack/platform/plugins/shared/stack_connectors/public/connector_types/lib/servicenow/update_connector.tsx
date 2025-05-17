@@ -36,7 +36,7 @@ const title = i18n.translate('xpack.stackConnectors.components.serviceNow.update
 const step1InstallTitle = i18n.translate(
   'xpack.stackConnectors.components.serviceNow.updateFormInstallTitle',
   {
-    defaultMessage: 'Install the Elastic ServiceNow app',
+    defaultMessage: 'Install the gExplorer ServiceNow app',
   }
 );
 
@@ -142,7 +142,7 @@ const UpdateConnectorComponent: React.FC<Props> = ({
                   children: (
                     <FormattedMessage
                       id="xpack.stackConnectors.components.serviceNow.appRunning"
-                      defaultMessage="The Elastic App from the ServiceNow app store must be installed prior to running the update. {visitLink} to install the app"
+                      defaultMessage="The gExplorer App from the ServiceNow app store must be installed prior to running the update. {visitLink} to install the app"
                       values={{
                         visitLink: (
                           <SNStoreLink appId={snExternalServiceConfig[actionTypeId].appId ?? ''} />

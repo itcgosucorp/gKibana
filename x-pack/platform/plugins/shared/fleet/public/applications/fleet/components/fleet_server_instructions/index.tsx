@@ -96,7 +96,7 @@ const Header: React.FunctionComponent<{
               >
                 <FormattedMessage
                   id="xpack.fleet.fleetServerSetup.setupGuideLink"
-                  defaultMessage="Fleet and Elastic Agent Guide"
+                  defaultMessage="Fleet and gExplorer Agent Guide"
                 />
               </EuiLink>
             ),
@@ -192,7 +192,7 @@ export const AddFleetServerLanding: React.FunctionComponent = () => {
                   >
                     <FormattedMessage
                       id="xpack.fleet.fleetServerSetup.setupGuideLink"
-                      defaultMessage="Fleet and Elastic Agent Guide"
+                      defaultMessage="Fleet and gExplorer Agent Guide"
                     />
                   </EuiLink>
                 ),
@@ -206,7 +206,7 @@ export const AddFleetServerLanding: React.FunctionComponent = () => {
             content={
               <FormattedMessage
                 id="xpack.fleet.fleetServerLanding.addFleetServerButton.tooltip"
-                defaultMessage="Fleet Server is a component of the Elastic Stack used to centrally manage Elastic Agents"
+                defaultMessage="Fleet Server is a component of the gExplorer Stack used to centrally manage gExplorer Agents"
               />
             }
           >

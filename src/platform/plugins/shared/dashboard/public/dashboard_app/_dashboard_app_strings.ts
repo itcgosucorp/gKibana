@@ -33,7 +33,7 @@ export const dashboardManagedBadge = {
     }),
   getBadgeAriaLabel: () =>
     i18n.translate('dashboard.managedContentBadge.ariaLabel', {
-      defaultMessage: 'Elastic manages this dashboard. Duplicate it to make changes.',
+      defaultMessage: 'gExplorer manages this dashboard. Duplicate it to make changes.',
     }),
 };
 

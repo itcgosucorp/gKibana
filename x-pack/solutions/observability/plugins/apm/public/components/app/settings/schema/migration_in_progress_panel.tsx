@@ -19,7 +19,7 @@ export function MigrationInProgressPanel() {
         <EuiCard
           icon={<EuiLoadingSpinner size="xl" />}
           title={i18n.translate('xpack.apm.settings.schema.migrationInProgressPanelTitle', {
-            defaultMessage: 'Switching to Elastic Agent...',
+            defaultMessage: 'Switching to gExplorer Agent...',
           })}
           description={i18n.translate(
             'xpack.apm.settings.schema.migrationInProgressPanelDescription',

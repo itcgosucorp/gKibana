@@ -165,7 +165,7 @@ export const ApiKeysEmptyPrompt: FC<PropsWithChildren<ApiKeysEmptyPromptProps>> 
         <p>
           <FormattedMessage
             id="xpack.security.management.apiKeysEmptyPrompt.emptyMessage"
-            defaultMessage="Allow external services to access the Elastic Stack on your behalf."
+            defaultMessage="Allow external services to access the gExplorer Stack on your behalf."
           />
         </p>
       }

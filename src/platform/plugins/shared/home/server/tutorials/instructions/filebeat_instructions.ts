@@ -335,7 +335,7 @@ export const createFilebeatCloudInstructions = () => ({
         defaultMessage: 'Edit the configuration',
       }),
       textPre: i18n.translate('home.tutorials.common.filebeatCloudInstructions.config.osxTextPre', {
-        defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+        defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
         values: {
           path: '`filebeat.yml`',
         },
@@ -348,7 +348,7 @@ export const createFilebeatCloudInstructions = () => ({
         defaultMessage: 'Edit the configuration',
       }),
       textPre: i18n.translate('home.tutorials.common.filebeatCloudInstructions.config.debTextPre', {
-        defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+        defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
         values: {
           path: '`/etc/filebeat/filebeat.yml`',
         },
@@ -361,7 +361,7 @@ export const createFilebeatCloudInstructions = () => ({
         defaultMessage: 'Edit the configuration',
       }),
       textPre: i18n.translate('home.tutorials.common.filebeatCloudInstructions.config.rpmTextPre', {
-        defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+        defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
         values: {
           path: '`/etc/filebeat/filebeat.yml`',
         },
@@ -376,7 +376,7 @@ export const createFilebeatCloudInstructions = () => ({
       textPre: i18n.translate(
         'home.tutorials.common.filebeatCloudInstructions.config.windowsTextPre',
         {
-          defaultMessage: 'Modify {path} to set the connection information for Elastic Cloud:',
+          defaultMessage: 'Modify {path} to set the connection information for gExplorer Cloud:',
           values: {
             path: '`C:\\Program Files\\Filebeat\\filebeat.yml`',
           },

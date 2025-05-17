@@ -37,7 +37,7 @@ export function ConfirmSwitchModal({ onConfirm, onCancel, unsupportedConfigs }: 
       })}
       onCancel={onCancel}
       confirmButtonText={i18n.translate('xpack.apm.settings.schema.confirm.switchButtonText', {
-        defaultMessage: 'Switch to Elastic Agent',
+        defaultMessage: 'Switch to gExplorer Agent',
       })}
       defaultFocusedButton="confirm"
       onConfirm={() => {
@@ -57,7 +57,7 @@ export function ConfirmSwitchModal({ onConfirm, onCancel, unsupportedConfigs }: 
       )}
       <EuiCallOut
         title={i18n.translate('xpack.apm.settings.schema.confirm.irreversibleWarning.title', {
-          defaultMessage: `Switching to Elastic Agent is an irreversible action`,
+          defaultMessage: `Switching to gExplorer Agent is an irreversible action`,
         })}
         color="warning"
         iconType="help"
@@ -98,7 +98,7 @@ export function ConfirmSwitchModal({ onConfirm, onCancel, unsupportedConfigs }: 
         <EuiCheckbox
           id={htmlIdGenerator()()}
           label={i18n.translate('xpack.apm.settings.schema.confirm.checkboxLabel', {
-            defaultMessage: `I confirm that I wish to switch to Elastic Agent`,
+            defaultMessage: `I confirm that I wish to switch to gExplorer Agent`,
           })}
           checked={isConfirmChecked}
           onChange={(e) => {

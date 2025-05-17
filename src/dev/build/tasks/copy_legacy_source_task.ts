@@ -31,6 +31,7 @@ export const CopyLegacySource: Task = {
       'src/setup_node_env/**',
       '!src/cli*/dev.js',
       '!src/setup_node_env/index.js',
+      'public/**',
 
       'x-pack/.i18nrc.json',
       'x-pack/package.json',

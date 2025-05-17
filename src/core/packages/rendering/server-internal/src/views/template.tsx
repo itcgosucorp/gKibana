@@ -33,7 +33,7 @@ export const Template: FunctionComponent<Props> = ({
     customBranding,
   },
 }) => {
-  const title = customBranding.pageTitle ?? 'Elastic';
+  const title = customBranding.pageTitle ?? 'gExplorer';
   const favIcon = customBranding.faviconSVG ?? `${uiPublicUrl}/favicons/favicon.svg`;
   const favIconPng = customBranding.faviconPNG ?? `${uiPublicUrl}/favicons/favicon.png`;
   const logo = customBranding.logo ? (
@@ -86,7 +86,7 @@ export const Template: FunctionComponent<Props> = ({
             <div
               className="kbnWelcomeText"
               data-error-message-title={i18n.translate('core.ui.welcomeErrorMessageTitle', {
-                defaultMessage: 'Elastic did not load properly',
+                defaultMessage: 'gExplorer did not load properly',
               })}
               data-error-message-text={i18n.translate('core.ui.welcomeErrorMessageText', {
                 defaultMessage:
@@ -97,7 +97,7 @@ export const Template: FunctionComponent<Props> = ({
               })}
             >
               {i18n.translate('core.ui.welcomeMessage', {
-                defaultMessage: 'Loading Elastic',
+                defaultMessage: 'Loading gExplorer',
               })}
             </div>
             <div className="kbnProgress" />
@@ -115,7 +115,7 @@ export const Template: FunctionComponent<Props> = ({
           <div className="kbnWelcomeText">
             {i18n.translate('core.ui.legacyBrowserMessage', {
               defaultMessage:
-                'This Elastic installation has strict security requirements enabled that your current browser does not meet.',
+                'This gExplorer installation has strict security requirements enabled that your current browser does not meet.',
             })}
           </div>
         </div>

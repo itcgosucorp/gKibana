@@ -15,7 +15,7 @@ import { createElasticCloudInstructions } from './envs/elastic_cloud';
 import { onPremInstructions } from './envs/on_prem';
 
 const apmIntro = i18n.translate('xpack.apm.tutorial.introduction', {
-  defaultMessage: 'Collect performance metrics from your applications with Elastic APM.',
+  defaultMessage: 'Collect performance metrics from your applications with gExplorer APM.',
 });
 const moduleName = 'apm';
 

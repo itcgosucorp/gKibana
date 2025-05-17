@@ -111,7 +111,7 @@ export function SchemaOverview({
               'xpack.apm.settings.schema.migrate.classicIndices.description',
               {
                 defaultMessage:
-                  'You are currently using APM Server binary. This legacy option is deprecated since version 7.16 and is being replaced by a managed APM Server in Elastic Agent from version 8.0.',
+                  'You are currently using APM Server binary. This legacy option is deprecated since version 7.16 and is being replaced by a managed APM Server in gExplorer Agent from version 8.0.',
               }
             )}
             footer={
@@ -136,13 +136,13 @@ export function SchemaOverview({
               </div>
             }
             title={i18n.translate('xpack.apm.settings.schema.migrate.dataStreams.title', {
-              defaultMessage: 'Elastic Agent',
+              defaultMessage: 'gExplorer Agent',
             })}
             description={i18n.translate(
               'xpack.apm.settings.schema.migrate.dataStreams.description',
               {
                 defaultMessage:
-                  'Starting in version 8.0, APM Server is recommended to be managed by Elastic Agent. Elastic Agent can run on our hosted Elasticsearch Service, ECE, or be self-managed. Then, add the Elastic APM integration to continue ingesting APM data.',
+                  'Starting in version 8.0, APM Server is recommended to be managed by gExplorer Agent. gExplorer Agent can run on our hosted Elasticsearch Service, ECE, or be self-managed. Then, add the gExplorer APM integration to continue ingesting APM data.',
               }
             )}
             footer={
@@ -162,7 +162,7 @@ export function SchemaOverview({
                     isDisabled={isDisabled}
                   >
                     {i18n.translate('xpack.apm.settings.schema.migrate.dataStreams.buttonText', {
-                      defaultMessage: 'Switch to Elastic Agent',
+                      defaultMessage: 'Switch to gExplorer Agent',
                     })}
                   </EuiButton>
                 </EuiToolTip>
@@ -185,7 +185,7 @@ export function SchemaOverviewHeading() {
       <EuiText color="subdued">
         <FormattedMessage
           id="xpack.apm.settings.schema.descriptionText"
-          defaultMessage="We have created a simple and seamless process for switching from APM Server binary to Elastic Agent. Beware this action is {irreversibleEmphasis} and can only be performed by a {superuserEmphasis} with access to Fleet. Learn more about {elasticAgentDocLink}."
+          defaultMessage="We have created a simple and seamless process for switching from APM Server binary to gExplorer Agent. Beware this action is {irreversibleEmphasis} and can only be performed by a {superuserEmphasis} with access to Fleet. Learn more about {elasticAgentDocLink}."
           values={{
             irreversibleEmphasis: (
               <strong>
@@ -210,7 +210,7 @@ export function SchemaOverviewHeading() {
               >
                 {i18n.translate(
                   'xpack.apm.settings.schema.descriptionText.elasticAgentDocLinkText',
-                  { defaultMessage: 'Elastic Agent' }
+                  { defaultMessage: 'gExplorer Agent' }
                 )}
               </EuiLink>
             ),
@@ -257,7 +257,7 @@ function getDisabledReason({
     return (
       <FormattedMessage
         id="xpack.apm.settings.schema.disabledReason"
-        defaultMessage="Switch to Elastic Agent is unavailable: {reasons}"
+        defaultMessage="Switch to gExplorer Agent is unavailable: {reasons}"
         values={{
           reasons: (
             <ul>
